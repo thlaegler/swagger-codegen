@@ -1,0 +1,5 @@
+#!/bin/bash
+
+{{#operations}}{{#operation}}
+-curl -i -X POST http://{{kongHost}}:{{kongPort}}/apis/ -d 'name={{targetApiName}}' -d 'upstream_url={{basePath}}' -d 'uris={{path}}' -d 'methods={{httpMethod}}'
+{{/operation}}{{/operations}}
